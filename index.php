@@ -24,7 +24,7 @@ $anoAtual = date('Y');
 
 <body class="bg-gray-100 min-h-screen">
 
-<header class="bg-white border-t-8 border-orange-600 px-48">
+    <header class="bg-white border-t-8 border-orange-600 px-48">
         <div class="mx-auto py-4 flex flex-col md:flex-row md:items-center md:justify-between">
 
             <div class="flex items-center gap-4">
@@ -42,20 +42,13 @@ $anoAtual = date('Y');
 
             <div class="mt-4 md:mt-0 w-full md:w-80">
                 <div class="relative">
-                    <input 
-                        type="text" 
-                        placeholder="Pesquisar..."
-                        class="bg-gray-100 w-full pl-4 pr-10 py-2 border border-gray-300 rounded-2xl
+                    <input type="text" placeholder="Pesquisar..." class="bg-gray-100 w-full pl-4 pr-10 py-2 border border-gray-300 rounded-2xl
                                focus:outline-none focus:ring-2 focus:ring-orange-400 
-                               focus:border-orange-400 transition"
-                    >
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         class="h-5 w-5 text-gray-400 absolute right-3 top-2.5"
-                         fill="none"
-                         viewBox="0 0 24 24"
-                         stroke="currentColor">
+                               focus:border-orange-400 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute right-3 top-2.5"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M21 21l-4.35-4.35M16.65 10.65a6 6 0 11-12 0 6 6 0 0112 0z" />
+                            d="M21 21l-4.35-4.35M16.65 10.65a6 6 0 11-12 0 6 6 0 0112 0z" />
                     </svg>
                 </div>
             </div>
@@ -143,7 +136,7 @@ $anoAtual = date('Y');
 
     <main class="max-w-9xl mx-auto py-12 px-48">
 
-        <div class="text-xl text-right text-green-600 font-semibold mb-8">
+        <div class="text-xl text-right text-green-600 font-semibold mb-8 mb-4 md:mb-8 lg:mb-12">
             <?= ucfirst($dataFormatada); ?>
         </div>
 
@@ -151,8 +144,9 @@ $anoAtual = date('Y');
 
             <!-- TEXTO -->
             <div>
-                <h1 class="text-8xl md:text-8xl font-bold text-green-600 leading-tight">
-                    Bem Vindos ao <br> Nosso Portal!
+                <h1
+                    class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-green-600 leading-tight">
+                    Bem Vindos ao <br class="hidden sm:block"> Nosso Portal!
                 </h1>
 
                 <p class="mt-6 text-gray-600 text-lg">
@@ -169,17 +163,18 @@ $anoAtual = date('Y');
 
                         <!-- Slide 1 -->
                         <div class="min-w-full h-86">
-                            <img src="images/caroussel/ImgCarrosel1.png" 
-                                 class="w-full h-full object-cover">
+                            <img src="images/caroussel/ImgCarrosel1.png" class="w-full h-full object-cover">
                         </div>
 
                         <!-- Slide 2 -->
-                        <div class="min-w-full h-86 bg-green-500 flex items-center justify-center text-white text-3xl font-bold">
+                        <div
+                            class="min-w-full h-86 bg-green-500 flex items-center justify-center text-white text-3xl font-bold">
                             Portal 452 Atualizado
                         </div>
 
                         <!-- Slide 3 -->
-                        <div class="min-w-full h-86 bg-blue-500 flex items-center justify-center text-white text-3xl font-bold">
+                        <div
+                            class="min-w-full h-86 bg-blue-500 flex items-center justify-center text-white text-3xl font-bold">
                             Bem-vindo ao Sistema
                         </div>
 
@@ -187,13 +182,13 @@ $anoAtual = date('Y');
                 </div>
 
                 <!-- Botões -->
-                <button onclick="prevSlide()" 
-                        class="h-14 absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow">
+                <button onclick="prevSlide()"
+                    class="h-14 absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow">
                     ❮
                 </button>
 
-                <button onclick="nextSlide()" 
-                        class="h-14 absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow">
+                <button onclick="nextSlide()"
+                    class="h-14 absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow">
                     ❯
                 </button>
 
@@ -201,86 +196,79 @@ $anoAtual = date('Y');
 
         </div>
 
-        <section class="bg-gray-100">
+        <section class="bg-gray-100 mt-4 md:mt-8 lg:mt-12">
+
             <div class="mx-auto px-6">
-                
+
                 <!-- Título -->
                 <h2 class="text-3xl font-semibold text-green-600 mb-8">
-                Links Úteis
+                    Links Úteis
                 </h2>
 
                 <!-- Grid dos Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                <!-- Card 1 -->
-                <a href="#" target="_blank"
-                    class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <!-- Card 1 -->
+                    <a href="#" target="_blank"
+                        class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
 
-                    <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition"
-                        fill="none" stroke="currentColor" stroke-width="1.5"
-                        viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21 12.79V7a2 2 0 00-2-2h-3.21
+                        <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition" fill="none"
+                            stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79V7a2 2 0 00-2-2h-3.21
                             a1 1 0 01-.7-.29l-1.59-1.59
-                            a1 1 0 00-.7-.29H9a2 2 0 00-2 2v2"/>
-                    </svg>
+                            a1 1 0 00-.7-.29H9a2 2 0 00-2 2v2" />
+                        </svg>
 
-                    <span class="text-lg font-medium text-green-600">
-                    Aniversariantes do mês
-                    </span>
-                </a>
+                        <span class="text-lg font-medium text-green-600">
+                            Aniversariantes do mês
+                        </span>
+                    </a>
 
-                <!-- Card 2 -->
-                <a href="https://ibmsvg.br-atacadao.corp:9443/itim/ui/Login.jsp" target="_blank"
-                    class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <!-- Card 2 -->
+                    <a href="https://ibmsvg.br-atacadao.corp:9443/itim/ui/Login.jsp" target="_blank"
+                        class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
 
-                    <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition"
-                        fill="none" stroke="currentColor" stroke-width="1.5"
-                        viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M7 8h10M7 12h6m-6 4h10"/>
-                    </svg>
+                        <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition" fill="none"
+                            stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h6m-6 4h10" />
+                        </svg>
 
-                    <span class="text-lg font-medium text-green-600">
-                    IDM Usuário
-                    </span>
-                </a>
+                        <span class="text-lg font-medium text-green-600">
+                            IDM Usuário
+                        </span>
+                    </a>
 
-                <!-- Card 3 -->
-                <a href="https://ibmsvg.br-atacadao.corp:9443/itim/console/jsp/logon/Login.jsp" target="_blank"
-                    class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <!-- Card 3 -->
+                    <a href="https://ibmsvg.br-atacadao.corp:9443/itim/console/jsp/logon/Login.jsp" target="_blank"
+                        class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
 
-                    <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition"
-                        fill="none" stroke="currentColor" stroke-width="1.5"
-                        viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M16 7l-4 4-4-4m0 6l4-4 4 4"/>
-                    </svg>
+                        <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition" fill="none"
+                            stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7l-4 4-4-4m0 6l4-4 4 4" />
+                        </svg>
 
-                    <span class="text-lg font-medium text-green-600">
-                    IDM Administrativo
-                    </span>
-                </a>
+                        <span class="text-lg font-medium text-green-600">
+                            IDM Administrativo
+                        </span>
+                    </a>
 
-                <!-- Card 4 -->
-                <a href="https://nfe.portal.br-atacadao.corp/NFe_GDeWeb_AD/saidas.aspx" target="_blank"
-                    class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <!-- Card 4 -->
+                    <a href="https://nfe.portal.br-atacadao.corp/NFe_GDeWeb_AD/saidas.aspx" target="_blank"
+                        class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
 
-                    <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition"
-                        fill="none" stroke="currentColor" stroke-width="1.5"
-                        viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 4l8 16H4L12 4z"/>
-                    </svg>
+                        <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition" fill="none"
+                            stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4l8 16H4L12 4z" />
+                        </svg>
 
-                    <span class="text-lg font-medium text-green-600">
-                    Triangulus Verde
-                    </span>
-                </a>
+                        <span class="text-lg font-medium text-green-600">
+                            Triangulus Verde
+                        </span>
+                    </a>
 
                 </div>
             </div>
-            </section>
+        </section>
 
 
     </main>
@@ -288,8 +276,8 @@ $anoAtual = date('Y');
     <footer class="bg-gray-200 py-6 mt-12">
         <div class="max-w-7xl mx-auto text-center">
             <p class="text-sm text-gray-600">
-                Todos os direitos reservados Filial 452 © 
-                <span class="font-medium">Gustavo da Cruz Santos</span> 
+                Todos os direitos reservados Filial 452 ©
+                <span class="font-medium">Gustavo da Cruz Santos</span>
                 <?= $anoAtual ?>
             </p>
         </div>
@@ -329,4 +317,5 @@ $anoAtual = date('Y');
         setInterval(rolarTitulo, 400);
     </script>
 </body>
+
 </html>
