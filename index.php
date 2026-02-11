@@ -1,3 +1,17 @@
+<?php
+date_default_timezone_set('America/Sao_Paulo');
+
+$formatter = new IntlDateFormatter(
+    'pt_BR',
+    IntlDateFormatter::FULL,
+    IntlDateFormatter::NONE,
+    'America/Sao_Paulo'
+);
+
+$dataFormatada = $formatter->format(new DateTime());
+$anoAtual = date('Y');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -130,7 +144,7 @@
     <main class="max-w-9xl mx-auto py-12 px-48">
 
         <div class="text-xl text-right text-green-600 font-semibold mb-8">
-            Sexta-feira, 9 de Janeiro de 2026
+            <?= ucfirst($dataFormatada); ?>
         </div>
 
         <div class="grid md:grid-cols-2 gap-10 items-center">
@@ -272,13 +286,13 @@
     </main>
 
     <footer class="bg-gray-200 py-6 mt-12">
-    <div class="max-w-7xl mx-auto text-center">
-        <p class="text-sm text-gray-600">
-        Todos os direitos reservados Filial 452 © 
-        <span class="font-medium">Gustavo da Cruz Santos</span> 
-        2026
-        </p>
-    </div>
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-sm text-gray-600">
+                Todos os direitos reservados Filial 452 © 
+                <span class="font-medium">Gustavo da Cruz Santos</span> 
+                <?= $anoAtual ?>
+            </p>
+        </div>
     </footer>
 
 
