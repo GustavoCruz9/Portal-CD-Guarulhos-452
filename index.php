@@ -271,16 +271,48 @@
 
     </main>
 
-<script>
-    let tituloOriginal = "Portal CD Guarulhos | 452 - ";
-    let titulo = tituloOriginal;
+    <footer class="bg-gray-200 py-6 mt-12">
+    <div class="max-w-7xl mx-auto text-center">
+        <p class="text-sm text-gray-600">
+        Todos os direitos reservados Filial 452 © 
+        <span class="font-medium">Gustavo da Cruz Santos</span> 
+        2026
+        </p>
+    </div>
+    </footer>
 
-    function rolarTitulo() {
-        titulo = titulo.substring(1) + titulo.charAt(0);
-        document.title = titulo;
-    }
 
-    setInterval(rolarTitulo, 400);
-</script>
+    <!-- SCRIPT CAROUSEL -->
+    <script>
+        let currentIndex = 0;
+        const carousel = document.getElementById("carousel");
+        const totalSlides = carousel.children.length;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        setInterval(nextSlide, 8000);
+
+        let tituloOriginal = "Portal CD Guarulhos | 452 - ";
+        let titulo = tituloOriginal;
+
+        function rolarTitulo() {
+            titulo = titulo.substring(1) + titulo.charAt(0);
+            document.title = titulo;
+        }
+
+        setInterval(rolarTitulo, 400);
+    </script>
 </body>
 </html>
