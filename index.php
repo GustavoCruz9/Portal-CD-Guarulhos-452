@@ -49,7 +49,84 @@
         </div>
     </header>
 
-   
+    <nav class="bg-white border-t border-gray-300 shadow-md">
+        <div class="max-w-7xl mx-auto">
+            <ul class="flex justify-center items-center text-gray-800 font-semibold">
+
+                <!-- CPD -->
+                <li class="relative group">
+                    <button class="px-6 py-4 hover:text-green-600 flex items-center gap-2 transition text-lg">
+                        CPD <span class="text-sm">▾</span>
+                    </button>
+
+                    <ul class="absolute left-0 top-full hidden group-hover:block 
+                               w-48 bg-white shadow-lg rounded-md border border-gray-200 z-50">
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Chamados</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Inventário</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Relatórios</li>
+                    </ul>
+                </li>
+
+                <div class="h-6 w-px bg-gray-400"></div>
+
+                <!-- RH -->
+                <li class="relative group">
+                    <button class="px-6 py-4 hover:text-green-600 flex items-center gap-2 transition text-lg">
+                        RH <span class="text-sm">▾</span>
+                    </button>
+
+                    <ul class="absolute left-0 top-full hidden group-hover:block 
+                               w-48 bg-white shadow-lg rounded-md border border-gray-200 z-50">
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Folha</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Férias</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Benefícios</li>
+                    </ul>
+                </li>
+
+                <div class="h-6 w-px bg-gray-400"></div>
+
+                <!-- Estoque -->
+                <li class="relative group">
+                    <button class="px-6 py-4 hover:text-green-600 flex items-center gap-2 transition text-lg">
+                        Estoque <span class="text-sm">▾</span>
+                    </button>
+
+                    <ul class="absolute left-0 top-full hidden group-hover:block 
+                               w-48 bg-white shadow-lg rounded-md border border-gray-200 z-50">
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Entrada</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Saída</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Consulta</li>
+                    </ul>
+                </li>
+
+                <div class="h-6 w-px bg-gray-400"></div>
+
+                <!-- Expedição -->
+                <li class="relative group">
+                    <button class="px-6 py-4 hover:text-green-600 flex items-center gap-2 transition text-lg">
+                        Expedição <span class="text-sm">▾</span>
+                    </button>
+
+                    <ul class="absolute left-0 top-full hidden group-hover:block 
+                               w-48 bg-white shadow-lg rounded-md border border-gray-200 z-50">
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Separação</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Romaneios</li>
+                    </ul>
+                </li>
+
+                <div class="h-6 w-px bg-gray-400"></div>
+
+                <!-- Ramais -->
+                <li>
+                    <button class="px-6 py-4 hover:text-green-600 transition text-lg">
+                        Ramais
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
 <script>
     let tituloOriginal = "Portal CD Guarulhos | 452 - ";
     let titulo = tituloOriginal;
