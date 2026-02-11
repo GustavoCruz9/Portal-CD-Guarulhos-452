@@ -127,6 +127,150 @@
         </div>
     </nav>
 
+    <main class="max-w-9xl mx-auto py-12 px-48">
+
+        <div class="text-xl text-right text-green-600 font-semibold mb-8">
+            Sexta-feira, 9 de Janeiro de 2026
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+
+            <!-- TEXTO -->
+            <div>
+                <h1 class="text-8xl md:text-8xl font-bold text-green-600 leading-tight">
+                    Bem Vindos ao <br> Nosso Portal!
+                </h1>
+
+                <p class="mt-6 text-gray-600 text-lg">
+                    Aqui você terá acesso a todos os link que precisa,
+                    caso não encontre algo por aqui fale com o CPD.
+                </p>
+            </div>
+
+            <!-- CAROUSEL -->
+            <div class="relative">
+
+                <div class="overflow-hidden rounded-3xl">
+                    <div id="carousel" class="flex transition-transform duration-500">
+
+                        <!-- Slide 1 -->
+                        <div class="min-w-full h-86">
+                            <img src="images/caroussel/ImgCarrosel1.png" 
+                                 class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="min-w-full h-86 bg-green-500 flex items-center justify-center text-white text-3xl font-bold">
+                            Portal 452 Atualizado
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="min-w-full h-86 bg-blue-500 flex items-center justify-center text-white text-3xl font-bold">
+                            Bem-vindo ao Sistema
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Botões -->
+                <button onclick="prevSlide()" 
+                        class="h-14 absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow">
+                    ❮
+                </button>
+
+                <button onclick="nextSlide()" 
+                        class="h-14 absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow">
+                    ❯
+                </button>
+
+            </div>
+
+        </div>
+
+        <section class="bg-gray-100">
+            <div class="mx-auto px-6">
+                
+                <!-- Título -->
+                <h2 class="text-3xl font-semibold text-green-600 mb-8">
+                Links Úteis
+                </h2>
+
+                <!-- Grid dos Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Card 1 -->
+                <a href="#" target="_blank"
+                    class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+
+                    <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition"
+                        fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 12.79V7a2 2 0 00-2-2h-3.21
+                            a1 1 0 01-.7-.29l-1.59-1.59
+                            a1 1 0 00-.7-.29H9a2 2 0 00-2 2v2"/>
+                    </svg>
+
+                    <span class="text-lg font-medium text-green-600">
+                    Aniversariantes do mês
+                    </span>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="https://ibmsvg.br-atacadao.corp:9443/itim/ui/Login.jsp" target="_blank"
+                    class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+
+                    <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition"
+                        fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 8h10M7 12h6m-6 4h10"/>
+                    </svg>
+
+                    <span class="text-lg font-medium text-green-600">
+                    IDM Usuário
+                    </span>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="https://ibmsvg.br-atacadao.corp:9443/itim/console/jsp/logon/Login.jsp" target="_blank"
+                    class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+
+                    <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition"
+                        fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16 7l-4 4-4-4m0 6l4-4 4 4"/>
+                    </svg>
+
+                    <span class="text-lg font-medium text-green-600">
+                    IDM Administrativo
+                    </span>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="https://nfe.portal.br-atacadao.corp/NFe_GDeWeb_AD/saidas.aspx" target="_blank"
+                    class="group bg-white border-2 border-orange-500 rounded-2xl p-8 flex flex-col items-center text-center shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+
+                    <svg class="w-12 h-12 text-green-600 mb-4 group-hover:scale-110 transition"
+                        fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 4l8 16H4L12 4z"/>
+                    </svg>
+
+                    <span class="text-lg font-medium text-green-600">
+                    Triangulus Verde
+                    </span>
+                </a>
+
+                </div>
+            </div>
+            </section>
+
+
+    </main>
+
 <script>
     let tituloOriginal = "Portal CD Guarulhos | 452 - ";
     let titulo = tituloOriginal;
