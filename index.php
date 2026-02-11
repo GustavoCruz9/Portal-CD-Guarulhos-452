@@ -10,6 +10,45 @@
 
 <body class="bg-gray-100 min-h-screen">
 
+<header class="bg-white border-t-8 border-orange-600 px-48">
+        <div class="mx-auto py-4 flex flex-col md:flex-row md:items-center md:justify-between">
+
+            <div class="flex items-center gap-4">
+                <img src="images/LogoAtacadao.png" alt="Logo Atacadão" class="h-14">
+
+                <div>
+                    <h1 class="text-4xl font-bold text-green-600">
+                        Atacadão
+                    </h1>
+                    <p class="text-lg text-green-600">
+                        CD | Guarulhos 452
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-4 md:mt-0 w-full md:w-80">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        placeholder="Pesquisar..."
+                        class="bg-gray-100 w-full pl-4 pr-10 py-2 border border-gray-300 rounded-2xl
+                               focus:outline-none focus:ring-2 focus:ring-orange-400 
+                               focus:border-orange-400 transition"
+                    >
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="h-5 w-5 text-gray-400 absolute right-3 top-2.5"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-4.35-4.35M16.65 10.65a6 6 0 11-12 0 6 6 0 0112 0z" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
    
 <script>
     let tituloOriginal = "Portal CD Guarulhos | 452 - ";
