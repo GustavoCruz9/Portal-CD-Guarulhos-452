@@ -25,4 +25,9 @@ return [
             ["nome" => "Consulta", "link" => "#"],
         ]
     ],
+        [
+        "setor" => "Ramais",
+        "link" => "/Portal/Ramais/ramais.php"
+    ]
+
 ];

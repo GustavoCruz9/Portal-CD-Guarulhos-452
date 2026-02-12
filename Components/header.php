@@ -51,28 +51,45 @@
         <div class="max-w-7xl mx-auto">
             <ul class="flex justify-center items-center text-gray-800 font-semibold">
 
-                <?php foreach ($menu as $setor): ?>
-                    <li class="relative group">
-                        <button class="px-6 py-4 hover:text-green-600 flex items-center gap-2 transition text-lg">
-                            <?= $setor["setor"] ?> <span class="text-sm">▾</span>
-                        </button>
+                <?php foreach ($menu as $index => $setor): ?>
+                    <?php if (isset($setor["itens"])): ?>
 
-                        <ul class="absolute left-0 top-full hidden group-hover:block 
-                                w-48 bg-white shadow-lg rounded-md border border-gray-200 z-50">
+                        <!-- Dropdown -->
+                        <li class="relative group">
+                            <button class="px-6 py-4 hover:text-green-600 flex items-center gap-2 transition text-lg">
+                                <?= $setor["setor"] ?> <span class="text-sm">▾</span>
+                            </button>
 
-                            <?php foreach ($setor["itens"] as $item): ?>
-                                <li>
-                                    <a href="<?= $item["link"] ?>" 
-                                    class="block px-4 py-2 hover:bg-gray-100">
-                                        <?= $item["nome"] ?>
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
+                            <ul class="absolute left-0 top-full hidden group-hover:block 
+                                    w-48 bg-white shadow-lg rounded-md border border-gray-200 z-50">
 
-                        </ul>
-                    </li>
+                                <?php foreach ($setor["itens"] as $item): ?>
+                                    <li>
+                                        <a href="<?= $item["link"] ?>" 
+                                        class="block px-4 py-2 hover:bg-gray-100">
+                                            <?= $item["nome"] ?>
+                                        </a>
+                                    </li>
+                                <?php endforeach; ?>
 
-                    <div class="h-6 w-px bg-gray-400"></div>
+                            </ul>
+                        </li>
+
+                    <?php else: ?>
+
+                        <!-- Link Simples -->
+                        <li>
+                            <a href="<?= $setor["link"] ?>" 
+                            class="px-6 py-4 hover:text-green-600 transition text-lg">
+                                <?= $setor["setor"] ?>
+                            </a>
+                        </li>
+
+                    <?php endif; ?>
+
+                    <?php if ($index < count($menu) - 1): ?>
+                        <div class="h-6 w-px bg-gray-400"></div>
+                    <?php endif; ?>
 
                 <?php endforeach; ?>
 
