@@ -17,7 +17,7 @@
     <header class="bg-white border-t-8 border-orange-600 px-48">
         <div class="mx-auto py-4 flex flex-col md:flex-row md:items-center md:justify-between">
 
-            <div class="flex items-center gap-4">
+            <a href="<?= '/Portal/index.php' ?>" class="flex items-center gap-4">
                 <img src="/Portal/images/LogoAtacadao.png" alt="Logo Atacadão" class="h-14">
 
                 <div>
@@ -28,7 +28,7 @@
                         CD | Guarulhos 452
                     </p>
                 </div>
-            </div>
+            </a>
 
             <div class="mt-4 md:mt-0 w-full md:w-80">
                 <div class="relative">
