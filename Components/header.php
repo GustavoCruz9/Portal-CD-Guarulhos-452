@@ -66,6 +66,7 @@
                                 <?php foreach ($setor["itens"] as $item): ?>
                                     <li>
                                         <a href="<?= $item["link"] ?>" 
+                                        target="_blank"
                                         class="block px-4 py-2 hover:bg-gray-100">
                                             <?= $item["nome"] ?>
                                         </a>
@@ -98,24 +99,32 @@
     </nav>
 
     <script>
-        const menuItems = [
-            { setor: "CPD", nome: "Chamados", link: "#" },
-            { setor: "CPD", nome: "Inventário", link: "#" },
-            { setor: "CPD", nome: "Relatórios", link: "#" },
+        const rawMenu = <?= json_encode($menu) ?>;
 
-            { setor: "RH", nome: "Folha", link: "#" },
-            { setor: "RH", nome: "Férias", link: "#" },
-            { setor: "RH", nome: "Benefícios", link: "#" },
+        const menuItems = [];
 
-            { setor: "Estoque", nome: "Entrada", link: "#" },
-            { setor: "Estoque", nome: "Saída", link: "#" },
-            { setor: "Estoque", nome: "Consulta", link: "#" },
+        rawMenu.forEach(setor => {
 
-            { setor: "Expedição", nome: "Separação", link: "#" },
-            { setor: "Expedição", nome: "Romaneios", link: "#" },
+            // Se for dropdown
+            if (setor.itens) {
+                setor.itens.forEach(item => {
+                    menuItems.push({
+                        setor: setor.setor,
+                        nome: item.nome,
+                        link: item.link
+                    });
+                });
+            } 
+            // Se for link simples
+            else {
+                menuItems.push({
+                    setor: "Geral",
+                    nome: setor.setor,
+                    link: setor.link
+                });
+            }
 
-            { setor: "Geral", nome: "Ramais", link: "./Ramais/ramais.php" }
-        ];
+        });
 
         const input = document.getElementById("searchInput");
         const results = document.getElementById("searchResults");
@@ -164,6 +173,7 @@
             }
         });
     </script>
+
 
 
 </body>

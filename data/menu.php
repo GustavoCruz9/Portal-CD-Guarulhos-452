@@ -7,6 +7,7 @@ return [
             ["nome" => "Chamados", "link" => "/Portal/cpd/chamados.php"],
             ["nome" => "Inventário", "link" => "/Portal/cpd/inventario.php"],
             ["nome" => "Relatórios", "link" => "/Portal/cpd/relatorios.php"],
+            ["nome" => "Portal Impressoras", "link" => "https://srvsave452.br-atacadao.corp/Check_Impressoras/"],
         ]
     ],
     [
