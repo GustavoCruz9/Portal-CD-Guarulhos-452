@@ -1,38 +1,7 @@
 <?php
 
-$ramaisJson = '[
-    {"setor": "Expedição", "nome": "Gerência Geral", "ramal": "2000"},
-    {"setor": "Expedição", "nome": "Gerência Geral", "ramal": "2000"},
-    {"setor": "Expedição", "nome": "Gerência Geral", "ramal": "2000"},
-    {"setor": "Estoque", "nome": "Secretaria", "ramal": "2001"},
-    {"setor": "Estoque", "nome": "Secretaria", "ramal": "2001"},
-    {"setor": "Estoque", "nome": "Secretaria", "ramal": "2001"},
-    {"setor": "Estoque", "nome": "Secretaria", "ramal": "2001"},
-    {"setor": "Prevenção", "nome": "Financeiro", "ramal": "2010"},
-    {"setor": "Prevenção", "nome": "Financeiro", "ramal": "2010"},
-    {"setor": "Vendas", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Financeiro", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Financeiro", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Financeiro", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Financeiro", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "RH", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "RH", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Nutricionista", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Nutricionista", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "RM", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "RM", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "RM", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Gerencia", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Gerencia", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "Gerencia", "nome": "Contabilidade", "ramal": "2011"},
-    {"setor": "CPD", "nome": "Suporte", "ramal": "3000"},
-    {"setor": "CPD", "nome": "Infraestrutura", "ramal": "3001"}
-]';
+$ramais = require __DIR__ . '/../data/ramais.php';
 
-// Converte JSON para array PHP
-$ramais = json_decode($ramaisJson, true);
-
-// Agrupa por setor automaticamente
 $setores = [];
 foreach ($ramais as $item) {
     $setores[$item['setor']][] = $item;

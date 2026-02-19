@@ -1,5 +1,5 @@
 <?php
-    $menu = require __DIR__ . "/../data/menu.php";
+$menu = require __DIR__ . "/../data/menu.php";
 ?>
 
 <!DOCTYPE html>
@@ -32,13 +32,14 @@
 
             <div class="mt-4 md:mt-0 w-full md:w-80">
                 <div class="relative">
-                    <input  id="searchInput" type="text" placeholder="Pesquisar..." class="bg-gray-100 w-full pl-4 pr-10 py-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition">
+                    <input id="searchInput" type="text" placeholder="Pesquisar..."
+                        class="bg-gray-100 w-full pl-4 pr-10 py-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute right-3 top-2.5"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M21 21l-4.35-4.35M16.65 10.65a6 6 0 11-12 0 6 6 0 0112 0z" />
                     </svg>
-                    <div id="searchResults" 
+                    <div id="searchResults"
                         class="absolute mt-2 w-full bg-white shadow-lg rounded-xl border border-gray-200 hidden z-50">
                     </div>
                 </div>
@@ -65,9 +66,7 @@
 
                                 <?php foreach ($setor["itens"] as $item): ?>
                                     <li>
-                                        <a href="<?= $item["link"] ?>" 
-                                        target="_blank"
-                                        class="block px-4 py-2 hover:bg-gray-100">
+                                        <a href="<?= $item["link"] ?>" target="_blank" class="block px-4 py-2 hover:bg-gray-100">
                                             <?= $item["nome"] ?>
                                         </a>
                                     </li>
@@ -80,8 +79,7 @@
 
                         <!-- Link Simples -->
                         <li>
-                            <a href="<?= $setor["link"] ?>" 
-                            class="px-6 py-4 hover:text-green-600 transition text-lg">
+                            <a href="<?= $setor["link"] ?>" class="px-6 py-4 hover:text-green-600 transition text-lg">
                                 <?= $setor["setor"] ?>
                             </a>
                         </li>
@@ -114,7 +112,7 @@
                         link: item.link
                     });
                 });
-            } 
+            }
             // Se for link simples
             else {
                 menuItems.push({
